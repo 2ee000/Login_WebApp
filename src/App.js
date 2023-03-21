@@ -1,9 +1,24 @@
-function App() {
-  return (
-    <div className="App">
+import { createBrowserRouter, Route, RouterProvider } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './pages/Login';
 
-    </div>
+function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+  ])
+
+  return (
+    <RouterProvider router={router} />
   );
 }
 
 export default App;
+
+// 라우터 관리
