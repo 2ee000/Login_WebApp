@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-.app {
+.login {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -12,7 +12,7 @@
   background-color: black;
 }
 
-.app-wrapper {
+.login-app {
   width: 768px;
   height: 500px;
   display: flex;
@@ -21,7 +21,7 @@
   justify-content: center;
 }
 
-.login {
+.login-wrapper {
   width: 383px;
   height: 500px;
   display: flex;
@@ -32,13 +32,14 @@
   background-color: #FFFFFF;
 }
 
-.login-wrapper {
+.login-form {
   display: flex;
   flex-flow: column nowrap;
+  text-align: start;
   gap: 25px;
 }
 
-.login-wrapper p {
+.login-form p {
   font-family: 'Castoro';
   font-style: normal;
   font-size: 26px;
@@ -46,19 +47,19 @@
   line-height: 36px;
 }
 
-.input {
+.login__text {
   display: flex;
   flex-flow: column nowrap;
   gap: 8px;
 }
 
-.input__text {
+.login__input {
   display: flex;
   flex-flow: column nowrap;
   gap: 15px;
 }
 
-.input__text input {
+.login__input input {
   width: 275px;
   height: 40px;
   padding: 8px 20px;
@@ -73,12 +74,12 @@
   border-radius: 10px;
 }
 
-.input__extra {
+.login__forgot {
   display: flex;
   justify-content: end;
 }
 
-.input__extra a {
+.login__forgot a {
   font-family: 'Lato';
   font-style: normal;
   font-size: 12px;
@@ -87,7 +88,7 @@
   color: #2D2D2D;
 }
 
-.button {
+.login__button {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -96,26 +97,26 @@
   gap: 8px;
 }
 
-.button-wrapper {
+.login__button-wrapper {
   display: flex;
   flex-flow: column nowrap;
   gap: 15px;
 }
 
-.button-wrapper button {
+.login__button-wrapper button {
   width: 275px;
   height: 40px;
   border: none;
   border-radius: 10px;
 }
 
-.button-wrapper button:first-child {
+.login__button-wrapper button:first-child {
   color: #FFFFFF;
   background-color: #0B3835;
   box-shadow: 0px 4.375px 17.5px rgba(19, 78, 74, 0.18);
 }
 
-.button-wrapper button:last-child {
+.login__button-wrapper button:last-child {
   display: flex;
   align-items: center;
   text-align: center;
@@ -126,14 +127,14 @@
   gap: 10px;
 }
 
-.button-wrapper button:last-child p {
+.login__button-wrapper button:last-child p {
   width: 22.48px;
   height: 22.48px;
   background-image: url(../assets/google_icon.png);
   background-size: cover;
 }
 
-.button a {
+.login__button a {
   font-family: 'Lato';
   font-style: normal;
   font-size: 12px;
@@ -142,7 +143,7 @@
   color: #2D2D2D;
 }
 
-.background {
+.login__background {
   width: 385px;
   height: 500px;
   background-image: url('../assets/login_background.png');
@@ -151,19 +152,19 @@
 }
 
 @media all and (max-width:768px) {
-  .app-wrapper {
+  .login-app {
     width: 375px;
     height: 1001px;
     flex-flow: column;
     gap: 1px;
   }
 
-  .login {
+  .login-wrapper {
     width: 375px;
     height: 500px;
   }
 
-  .input__extra a {
+  .login__forgot a {
     font-family: 'Castoro';
     font-style: normal;
     font-weight: 400;
@@ -172,7 +173,7 @@
     text-decoration: none;
   }
 
-  .background {
+  .login__background {
     width: 375px;
     height: 500px;
   }
