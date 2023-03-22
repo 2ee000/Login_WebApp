@@ -14,14 +14,14 @@ class Input extends React.Component {
   }
   render() {
     return (
-      <div className='input'>
+      <div className='login-wrapper'>
         <p>Welcome back</p>
-        <div className='input-box'>
-          <div className='input-text'>
+        <div className='input'>
+          <div className='input__text'>
             <input type='email' placeholder='Email'/>
             <input type='password' placeholder='Password'/>
           </div>
-          <div className='input-extra'>
+          <div className='input__extra'>
             <a href='#'>Forgot password</a>
           </div>
         </div>
@@ -37,7 +37,7 @@ class Button extends React.Component {
   render() {
     return (
       <div className='button'>
-        <div className='button-box'>
+        <div className='button-wrapper'>
           <button type='submit'>CTA</button>
           <button onClick=''><p></p>Sign in with google</button>
         </div>
@@ -51,8 +51,8 @@ class Login extends React.Component {
   render() {
     return (
       <div className='app'>
-        <div className='all'>
-          <div className='left'>
+        <div className='app-wrapper'>
+          <div className='login'>
             <Input/>
             <Button/>
           </div>
