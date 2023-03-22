@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: black;
+}
+
+.all {
+  width: 768px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.left {
+  width: 383px;
+  height: 500px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  background-color: #FFFFFF;
+}
+
+.input {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 25px;
+}
+
+.input p {
+  font-family: 'Castoro';
+  font-style: normal;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.input-box {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 8px;
+}
+
+.input-text {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 15px;
+}
+
+.input-text input {
+  width: 275px;
+  height: 40px;
+  padding: 8px 20px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #2D2D2D;
+  background-color: #F7F7F7;
+  border: none;
+  border-radius: 10px;
+}
+
+.input-extra {
+  display: flex;
+  justify-content: end;
+}
+
+.input-extra a {
+  font-family: 'Lato';
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #2D2D2D;
+}
+
+.button {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.button-box {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 15px;
+}
+
+.button-box button {
+  width: 275px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+}
+
+.button-box button:first-child {
+  color: #FFFFFF;
+  background-color: #0B3835;
+}
+
+.button-box button:last-child {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid #F7F7F7;
+  color: #2D2D2D;
+  background-color: #FFFFFF;
+  gap: 10px;
+}
+
+.button-box button:last-child p {
+  width: 22.48px;
+  height: 22.48px;
+  background-image: url(../assets/google_icon.png);
+  background-size: cover;
+}
+
+.button a {
+  font-family: 'Lato';
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #2D2D2D;
+}
+
+.background {
+  width: 385px;
+  height: 500px;
+  background-image: url('../assets/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

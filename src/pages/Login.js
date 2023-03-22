@@ -1,10 +1,63 @@
-import React, { Component } from 'react';
+import React from 'react';
+import '../styles/login.css';
 
-class Login extends Component {
+function Background() {
+  return (
+    <div className='background'>
+    </div>
+  )
+}
+
+class Input extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <div>
-        <h1>Login!</h1>
+      <div className='input'>
+        <p>Welcome back</p>
+        <div className='input-box'>
+          <div className='input-text'>
+            <input type='email' placeholder='Email'/>
+            <input type='password' placeholder='Password'/>
+          </div>
+          <div className='input-extra'>
+            <a href='#'>Forgot password</a>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div className='button'>
+        <div className='button-box'>
+          <button type='submit'>CTA</button>
+          <button onClick=''><p></p>Sign in with google</button>
+        </div>
+        <a href='#'>Don't have an account? Sign up</a>
+      </div>
+    )
+  }
+}
+
+class Login extends React.Component {
+  render() {
+    return (
+      <div className='app'>
+        <div className='all'>
+          <div className='left'>
+            <Input/>
+            <Button/>
+          </div>
+          <Background/>
+        </div>
       </div>
     );
   }
