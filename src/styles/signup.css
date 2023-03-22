@@ -14,12 +14,12 @@
 
 .signup-app {
   width: 768px;
-  height: 807px;
+  height: 1267px;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
-  background: #FFFFFF;
+  background: #FFFDF8;
 }
 
 .signup-wrapper {
@@ -28,144 +28,161 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  gap: 25px;
+  gap: 35px;
 }
 
 .signup__background {
   display: flex;
   flex-flow: column nowrap;
-  align-content: center;
+  align-items: center;
   text-align: center;
-  justify-content: center;
-  gap: 25px;
-}
-
-.signup__background-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.signup__background-text p:first-child {
-  font-family: 'Castoro';
-  font-style: normal;
-  font-size: 65px;
-  font-weight: 400;
-  line-height: 65px;
-  color: #134E4A;
-
-  /*맞는지 모르겠음*/
-  text-shadow:-0.3px 0px 0px #2D2D2D,0.3px 0px 0px #2D2D2D,0px -0.3px 0px #2D2D2D,0px 0.3px 0px #2D2D2D;
-}
-
-.signup__background-text p:last-child {
-  width: 315px;
-  font-family: 'Lato';
-  font-style: normal;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #3B3B3B;
-}
-
-.signup__background-img {
-  width: 535px;
-  height: 227px;
-  background-image: url(../assets/signup_background.png);
-  background-size: cover;
-}
-
-.signup-form {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  gap: 40px;
-}
-
-.signup__input {
-  display: flex;
-  align-items: center;
-  text-align: start;
   justify-content: center;
   gap: 30px;
 }
 
-.signup__input-form {
+.signup__background p {
+  font-family: 'Castoro';
+  font-style: normal;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 50px;
+  color: #134E4A;
+  text-shadow: -0.3px 0 #2D2D2D, 0 0.3px #2D2D2D, 0.3px 0 #2D2D2D, 0 -0.3px #2D2D2D;
+}
+
+.signup__background-img {
+  width: 257px;
+  height: 204px;
+  background-image: url('../assets/signup_background.png');
+  background-size: cover;
+}
+
+.signup-form{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+
+.signup__input {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: start;
+  gap: 8px;
+}
+
+.signup__input p {
+  font-family: 'Lato';
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.444444px;
+  color: #C0C0C0;
+}
+
+.signup__input input {
+  width: 488px;
+  height: 60px;
+  padding: 18px 20px;
+  border: 1.5px solid #C0C0C0;
+  border-radius: 12px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.166667px;
+  color: #3B3B3B;
+}
+
+.signup__extra {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+}
+
+.signup__terms {
+  width: 488px;
+  height: 100px;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: start;
+  font-family: 'Mulish';
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.166667px;
+  color: #3B3B3B;
+}
+
+.signup__button {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
   gap: 15px;
 }
 
-.signup__input-type {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 5px;
-}
-
-.signup__input-type p {
-  font-family: 'Lato';
-  font-style: normal;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #2D2D2D;
-}
-
-.signup__input-type input {
-  width: 275px;
-  height: 40px;
-  border: 1px solid #D5D5D5;
-  border-radius: 10px;
-  font-family: 'Lato';
-  font-style: normal;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #B1B1B1;
-  padding: 8px 20px;
-}
-
-.signup-form button {
-  width: 120px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: #134E4A;
+.signup__button button {
+  width: 488px;
+  height: 60px;
+  text-align: center;
+  background: #134E4A;
   box-shadow: 0px 4.375px 17.5px rgba(19, 78, 74, 0.18);
+  border-radius: 12px;
   font-family: 'Lato';
   font-style: normal;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 24px;
   color: #FFFFFF;
 }
 
+.signup__login {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.signup__login a, p {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.166667px;
+  color: #3B3B3B;
+}
+
+.signup__login a {
+  color: rgba(7, 122, 104, 1);
+  text-decoration: none;
+}
+
 @media all and (max-width: 768px) {
   .signup-app {
     width: 375px;
-    height: 966px;
+    height: 1292px;
   }
 
-  .signup__background-text {
-    width: 315px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    gap: 22px;
+  .signup__background {
+    gap: 25px;
   }
 
-  .signup__background-img {
-    width: 315px;
-    height: 153px;
-    background-size: contain;
-    background-repeat: no-repeat;
+  .signup__input input {
+    width: 325px;
   }
 
-  .signup__input {
-    flex-flow: column;
-    gap: 15px;
+  .signup__terms {
+    width: 325px;
+    height: 130px;
+  }
+
+  .signup__button button {
+    width: 325px;
   }
 }

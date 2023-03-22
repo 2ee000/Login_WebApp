@@ -3,10 +3,7 @@ import React from 'react';
 function SignupBackground() {
   return(
     <div className='signup__background'>
-      <div className='signup__background-text'>
-          <p>Welcome back</p>
-          <p>Let’s be honest, it’s hard to fit working out into our busy schedule. With Trainerz you do less work and see more results.</p>
-      </div>
+      <p>Welcome back</p>
       <div className='signup__background-img'></div>
     </div>
   )
@@ -22,28 +19,33 @@ class Input extends React.Component {
         <SignupBackground/>
         <div className='signup-form'>
           <div className='signup__input'>
-            <div className='signup__input-form'>
-              <div className='signup__input-type'>
-                <p>Name</p>
-                <input type='text' placeholder='Enter Name'/>
-              </div>
-              <div className='signup__input-type'>
-                <p>Password</p>
-                <input type='password' placeholder='Enter Password'/>
-              </div>
-            </div>
-            <div className='signup__input-form'>
-              <div className='signup__input-type'>
-                <p>Eamil address</p>
-                <input type='email' placeholder='Enter Email Address'/>
-              </div>
-              <div className='signup__input-type'>
-                <p>Confirm Password</p>
-                <input type='password' placeholder='Enter Confirm Password'/>
-              </div>
+            <p>Name</p>
+            <input type='text' placeholder='Enter Full Name'/>
+          </div>
+          <div className='signup__input'>
+            <p>Phone Number</p>
+            <input type='number' placeholder='Enter Phone Number'/>
+          </div>
+          <div className='signup__input'>
+            <p>Eamil address</p>
+            <input type='email' placeholder='Enter Email Address'/>
+          </div>
+          <div className='signup__input'>
+            <p>Password</p>
+            <input type='password' placeholder='Enter Password'/>
+          </div>
+        </div>
+        <div className='signup__extra'>
+          <div className='signup__terms'>
+              <p>By creating an account you agree to the terms of use and our privacy policy.</p>
+          </div>
+          <div className='signup__button'>
+            <button type='submit'>Sign up</button>
+            <div className='signup__login'>
+              <p>Alerady have an account?&nbsp;</p>
+              <a href='#'>Log in</a>
             </div>
           </div>
-          <button type='submit'>Sign up</button>
         </div>
       </div>
     )
