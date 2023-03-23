@@ -37,10 +37,10 @@ class Input extends React.Component {
         </div>
         <div className='signup__extra'>
           <div className='signup__terms'>
-              <p>By creating an account you agree to the terms of use and our privacy policy.</p>
+            <p>By creating an account you agree to the <a href='#'>terms of use </a>and our <a href='#'>privacy policy.</a></p>
           </div>
           <div className='signup__button'>
-            <button type='submit'>Sign up</button>
+            <button type='submit'>CTA</button>
             <div className='signup__login'>
               <p>Alerady have an account?&nbsp;</p>
               <a href='#'>Log in</a>

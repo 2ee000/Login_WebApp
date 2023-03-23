@@ -8,6 +8,8 @@ class Signup extends React.Component {
     return (
       <div className='signup'>
         <div className='signup-app'>
+          <div className='signup__logo'></div>
+          <div className='signup__close'></div>
           <Input/>
         </div>
       </div>

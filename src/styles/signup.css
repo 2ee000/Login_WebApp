@@ -16,10 +16,32 @@
   width: 768px;
   height: 1267px;
   display: flex;
+  flex-flow: column nowrap;
   align-items: center;
   text-align: center;
   justify-content: center;
+  position: absolute;
   background: #FFFDF8;
+}
+
+.signup__logo {
+  width: 90.99px;
+  height: 18px;
+  position: absolute;
+  left: 25px;
+  top: 31px;
+  background-image: url('../assets/signup_logo.png');
+  background-size: cover;
+}
+
+.signup__close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  background-image: url('../assets/signup_close.png');
+  background-size: cover;
 }
 
 .signup-wrapper {
@@ -118,8 +140,7 @@
 .signup__terms {
   width: 488px;
   height: 100px;
-  display: flex;
-  flex-flow: column nowrap;
+  display: inline;
   text-align: start;
   font-family: 'Mulish';
   font-style: normal;
@@ -128,6 +149,11 @@
   line-height: 30px;
   letter-spacing: 0.166667px;
   color: #3B3B3B;
+}
+
+.signup__terms a {
+  text-decoration: none;
+  color: rgba(7, 122, 104, 1);
 }
 
 .signup__button {
