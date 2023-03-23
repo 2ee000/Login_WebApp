@@ -74,6 +74,15 @@
   border-radius: 10px;
 }
 
+.login__input input::placeholder {
+  font-family: 'Lato';
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #2D2D2D;
+}
+
 .login__forgot {
   display: flex;
   justify-content: end;
