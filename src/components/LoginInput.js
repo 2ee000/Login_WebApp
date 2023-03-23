@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Input extends React.Component {
+class LoginInput extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -22,4 +22,4 @@ class Input extends React.Component {
   }
 }
 
-export default Input;
+export default LoginInput;

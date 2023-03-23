@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../components/SignupInput';
+import SignupInput from '../components/SignupInput';
 import '../styles/signup.css';
 
 
@@ -8,9 +8,11 @@ class Signup extends React.Component {
     return (
       <div className='signup'>
         <div className='signup-app'>
-          <div className='signup__logo'></div>
-          <div className='signup__close'></div>
-          <Input/>
+          <div className='signup-header'>
+            <div className='signup__logo'></div>
+            <div className='signup__close'></div>
+          </div>
+          <SignupInput/>
         </div>
       </div>
     );

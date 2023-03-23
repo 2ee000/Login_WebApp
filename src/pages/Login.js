@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../components/LoginButton';
-import Input from '../components/LoginInput';
+import LoginButton from '../components/LoginButton';
+import LoginInput from '../components/LoginInput';
 import '../styles/login.css';
 
 function LoginBackground() {
@@ -16,8 +16,8 @@ class Login extends React.Component {
       <div className='login'>
         <div className='login-app'>
           <div className='login-wrapper'>
-            <Input/>
-            <Button/>
+            <LoginInput/>
+            <LoginButton/>
           </div>
           <LoginBackground/>
         </div>

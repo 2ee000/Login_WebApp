@@ -117,6 +117,7 @@
   height: 40px;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .login__button-wrapper button:first-child {
@@ -140,7 +141,7 @@
   width: 22.48px;
   height: 22.48px;
   background-image: url(../assets/google_icon.png);
-  background-size: cover;
+  background-size: contain;
 }
 
 .login__button a {
@@ -165,7 +166,6 @@
     width: 375px;
     height: 1001px;
     flex-flow: column;
-    gap: 1px;
   }
 
   .login-wrapper {

@@ -9,7 +9,7 @@ function SignupBackground() {
   )
 }
 
-class Input extends React.Component {
+class SignupInput extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -52,4 +52,4 @@ class Input extends React.Component {
   }
 }
 
-export default Input;
+export default SignupInput;

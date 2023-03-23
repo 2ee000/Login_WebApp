@@ -6,42 +6,45 @@
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-
   background-color: black;
 }
 
 .signup-app {
   width: 768px;
-  height: 1267px;
   display: flex;
+  gap: 50px;
   flex-flow: column nowrap;
   align-items: center;
   text-align: center;
   justify-content: center;
-  position: absolute;
   background: #FFFDF8;
+}
+
+.signup-header {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
 }
 
 .signup__logo {
   width: 90.99px;
   height: 18px;
-  position: absolute;
-  left: 25px;
-  top: 31px;
+  margin: 31px 0 0 25px;
   background-image: url('../assets/signup_logo.png');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .signup__close {
   width: 30px;
   height: 30px;
-  position: absolute;
-  right: 25px;
-  top: 25px;
+  margin: 25px 25px 0 0;
   background-image: url('../assets/signup_close.png');
-  background-size: cover;
+  background-size: contain;
 }
 
 .signup-wrapper {
@@ -139,7 +142,8 @@
 
 .signup__terms {
   width: 488px;
-  height: 100px;
+  height: fit-content;
+  margin-bottom: 40px;
   display: inline;
   text-align: start;
   font-family: 'Mulish';
@@ -178,6 +182,7 @@
   font-weight: 400;
   line-height: 24px;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .signup__login {
@@ -185,9 +190,10 @@
   align-items: center;
   text-align: center;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
-.signup__login a, p {
+.signup__login a, .signup__login p {
   font-family: 'Mulish';
   font-style: normal;
   font-size: 18px;
@@ -205,7 +211,7 @@
 @media all and (max-width: 768px) {
   .signup-app {
     width: 375px;
-    height: 1292px;
+    gap: 30px;
   }
 
   .signup__background {
@@ -218,7 +224,7 @@
 
   .signup__terms {
     width: 325px;
-    height: 130px;
+    margin-bottom: 20px;
   }
 
   .signup__button button {
