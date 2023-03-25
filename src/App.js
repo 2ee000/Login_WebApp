@@ -1,9 +1,22 @@
 import { createBrowserRouter, Route, RouterProvider } from 'react-router-dom';
+import axios from 'axios';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 
 function App() {
+  /*xios.get('').then();
+  const getData = async () => {
+    let response = await axios.get('');
+    return response.data;
+  }
+
+  let res = getData();
+
+  res.then((data) => {
+    console.log(data);
+  });*/
+
   const router = createBrowserRouter([
     {
       path: "/",
