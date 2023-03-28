@@ -5,7 +5,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 
 function App() {
-  /*xios.get('').then();
+  /*axios.get('').then();
   const getData = async () => {
     let response = await axios.get('');
     return response.data;

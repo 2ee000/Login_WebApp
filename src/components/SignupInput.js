@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+//import { redirect } from 'react-router-dom';
+//import { Navigate } from 'react-router-dom';
 
 function SignupBackground() {
   return(
@@ -10,21 +12,66 @@ function SignupBackground() {
   )
 }
 
-
 class SignupInput extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      userName: null,
-      userPhoneNumber: null,
-      userEmail: null,
-      userPassword: null
+      userName: '',
+      userPhoneNumber: '',
+      userEmail: '',
+      userPassword: ''
     };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleButton = this.handleButton.bind(this);
+    //this.props = props;
+    this.signupInput = this.signupInput.bind(this);
+    this.signupButton = this.signupButton.bind(this);
+    this.signupAxios = this.signupAxios.bind(this);
+    this.signupError = this.signupError.bind(this);
+    this.signupProps = this.signupProps.bind(this);
   }
 
-  async handleChange(event) {
+  signupAxios() {
+    axios.post("http://15.164.100.35:12044/user/signup",{
+      user_name: this.state.userName,
+      user_email: this.state.userEmail,
+      password: this.state.userPassword,
+      phone_number: this.state.userPhoneNumber,
+      })
+      .then(function (response) {
+        this.signupProps();
+        console.log(response);
+      }).catch(function (error) {
+        console.log(error);
+      })
+  }
+
+  signupProps() {
+    this.props.history.push('/login');
+
+  }
+
+  signupError() {
+    if(this.state.userName === '') {
+      window.alert('Please enter your name!');
+      return;
+    }
+    else if(this.state.userPhoneNumber === '') {
+      window.alert('Please enter your phone number!');
+      return;
+    }
+    else if(this.state.userEmail === '') {
+      window.alert('Please enter your email!');
+      return;
+    }
+    else if(this.state.userPassword === '') {
+      window.alert('Please enter your password!');
+      return;
+    }
+    else {
+      this.signupAxios();
+    }
+  }
+
+  async signupInput(event) {
     const name = event.target.name;
     await this.setState({
       [name]: event.target.value,
@@ -32,8 +79,9 @@ class SignupInput extends React.Component {
     console.log(this.state[name]);
   }
 
-  handleButton() {
-    console.log('button');
+  signupButton() {
+    console.log(this.state);
+    this.signupError();
   }
 
   render() {
@@ -46,28 +94,28 @@ class SignupInput extends React.Component {
             <input type='text' placeholder='Enter Full Name'
             name='userName'
             value={this.state.userName}
-            onChange={this.handleChange}/>
+            onChange={this.signupInput}/>
           </div>
           <div className='signup__input'>
             <p>Phone Number</p>
             <input type='number' placeholder='Enter Phone Number'
             name='userPhoneNumber'
             value={this.state.userPhoneNumber}
-            onChange={this.handleChange}/>
+            onChange={this.signupInput}/>
           </div>
           <div className='signup__input'>
             <p>Eamil address</p>
             <input type='email' placeholder='Enter Email Address'
             name='userEmail'
             value={this.state.userEmail}
-            onChange={this.handleChange}/>
+            onChange={this.signupInput}/>
           </div>
           <div className='signup__input'>
             <p>Password</p>
-            <input type='password' placeholder='Enter Password'
+            <input type='password' placeholder='Enter Password' minLength={'8'}
             name='userPassword'
             value={this.state.userPassword}
-            onChange={this.handleChange}/>
+            onChange={this.signupInput}/>
           </div>
         </div>
         <div className='signup__extra'>
@@ -75,7 +123,7 @@ class SignupInput extends React.Component {
             <p>By creating an account you agree to the <a href='#'>terms of use </a>and our <a href='#'>privacy policy.</a></p>
           </div>
           <div className='signup__button'>
-            <button onClick={this.handleButton} type='submit'>CTA</button>
+            <button onClick={this.signupButton} type='submit'>CTA</button>
             <div className='signup__login'>
               <p>Alerady have an account?&nbsp;</p>
               <a href='#'>Log in</a>
