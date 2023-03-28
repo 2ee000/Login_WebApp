@@ -8,6 +8,8 @@ class LoginButton extends React.Component {
   }
 
   loginButton() {
+    this.props.loginError();
+    this.props.loginAxios();
     console.log('loginButton Click!');
   }
 
@@ -22,7 +24,7 @@ class LoginButton extends React.Component {
           <button onClick={this.loginButton} type='submit'>CTA</button>
           <button onClick={this.googleButton}><p></p>Sign in with google</button>
         </div>
-        <a href='#'>Don't have an account? Sign up</a>
+        <a href='/signup'>Don't have an account? Sign up</a>
       </div>
     )
   }
