@@ -5,18 +5,6 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 
 function App() {
-  /*axios.get('').then();
-  const getData = async () => {
-    let response = await axios.get('');
-    return response.data;
-  }
-
-  let res = getData();
-
-  res.then((data) => {
-    console.log(data);
-  });*/
-
   const router = createBrowserRouter([
     {
       path: "/",

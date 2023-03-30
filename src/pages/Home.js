@@ -4,10 +4,16 @@ import '../styles/home.css';
 class Home extends Component {
   constructor(props) {
     super(props)
+  }
 
-    this.state = {
+  componentDidMount() {
+    if(window.localStorage.getItem('token') === null) {
+      window.location.replace('/login')
+    } else {
+      // 유저 정보를 요청
     }
   }
+
   render() {
     return (
       <div>

@@ -24,7 +24,7 @@ class Login extends React.Component {
     this.loginAxios = this.loginAxios.bind(this);
     this.loginError = this.loginError.bind(this);
   }
-
+//쿠키, 세션
   async loginAxios() {
     await axios.post("http://15.164.100.35:12044/auth/login", {
       user_email: this.state.userEmail,
@@ -33,12 +33,15 @@ class Login extends React.Component {
     .then((response) => {
       this.setState({navigateHome: true});
       console.log(response);
+      localStorage.clear(); // 모든 데이터 삭제
+      //localStorage.setItem('id', response.data.id); // id 데이터 저장
+      localStorage.setItem('token', response.data.token); // token데이터 저장
     }).catch((error) => {
       console.log(error);
     })
   }
-  
-  loginError() {
+
+  loginError() { // 입력한 정보가 없을 때
     if(this.state.userEmail === '') {
       window.alert('Please enter your email!');
       return;
@@ -50,7 +53,7 @@ class Login extends React.Component {
     }
   }
 
-  async loginCheck(event) {
+  async loginCheck(event) { // 입력한 정보 체크
     const name = event.target.name;
     await this.setState({
       [name]: event.target.value,
